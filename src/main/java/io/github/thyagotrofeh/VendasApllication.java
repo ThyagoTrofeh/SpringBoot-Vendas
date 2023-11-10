@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VendasApllication {
 
+
     @Autowired
     @Qualifier("applicationName")
     private String applicationName;
@@ -19,10 +20,12 @@ public class VendasApllication {
     public String helloWorld(){
         return "hello world";
     }
+
     @GetMapping("/application-name")
     public String applicationName(){
         return applicationName;
     }
+
     public static void main(String[] args) {
         SpringApplication.run(VendasApllication.class, args);
     }
